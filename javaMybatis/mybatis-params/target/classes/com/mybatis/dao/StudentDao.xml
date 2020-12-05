@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mybatis.dao.StudentDao">
+    <select id="selectStudentById" resultType="com.mybatis.domain.Student">
+        select * from student where id = #{id}
+    </select>
+
+    <select id="selectMultipleParam" resultType="com.mybatis.domain.Student">
+        select * from student where name = #{myName} or age = #{myAge}
+    </select>
+
+    <select id="selectMultipleObject" resultType="com.mybatis.domain.Student">
+        select * from student where name = #{paramName} or age = #{paramAge}
+    </select>
+
+    <!--  $替换列名  -->
+    <select id="selectUser$Order" resultType="com.mybatis.domain.Student">
+        select * from student order by ${colName}
+    </select>
+
+   <!--返回结果-->
+    <select id="selectViewStudent" resultType="com.mybatis.vo.ViewStudent">
+        select * from student
+    </select>
+
+    <!--resultMap-->
+    <resultMap id="studentMap" type="com.mybatis.domain.Student">
+     <!--列名和java属性的对应关系-->
+     <!--
+        主键列，使用id标签
+        column: 列名
+        property: java类型的属性名
+     -->
+      <id column="id" property="id" />
+      <!--非主键列，使用result-->
+        <result column="name" property="name" />
+        <result column="email" property="email" />
+        <result column="age" property="age" />
+    </resultMap>
+
+    <select id="selectAllStudents" resultMap="studentMap">
+        select * from student
+    </select>
+
+
+    <!--resultMap studentMap-->
+    <resultMap id="myStudentMap" type="com.mybatis.domain.MyStudent">
+        <id column="id" property="stuId" />
+        <!--非主键列，使用result-->
+        <result column="name" property="stuName" />
+        <result column="email" property="stuEmail" />
+        <result column="age" property="stuAge" />
+    </resultMap>
+
+    <select id="selectAllMyStudents" resultMap="myStudentMap">
+        select * from student
+    </select>
+
+   <!--第一种like，java-->
+    <select id="selectLike" resultType="com.mybatis.domain.Student">
+        select * from student where name like "%" #{name} "%"
+    </select>
+
+</mapper>

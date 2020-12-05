@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.vpn.website.client.mapper.TVenuefileMapper">
+
+   <!-- <select id="selectAllTVenue">
+                select * from t_venue
+           </select>
+
+    <insert id="addTVenue" parameterType="com.vpn.website.client.model.TVenue">
+            insert into t_venue (id, no, parentId, foreignSource, foreignId, name,description,categoryId,categoryName,provinceId,provinceName,cityId,cityName,countryId,countryName,districtId,districtName,lng,lat,coverPicPath,metroLines,metroStations,metroInfo,address,completionDate,floorHeight,floorHeightInfo,groundFloors,undergroundFloors,otherFloorsInfo,propertyManagementCompany,propertyFee,propertyFeeInfo,parkingSpace,parkingFee,airConditioner,airConditioningCost,airConditionedTime,elevator,networks,settledOrganization,style,frontDesk,meetingRoom,basicService,featureService,businessService,isHot,isNew,isAuto,rank,counselorId,counselorName,counselorScore,
+            counselorScorePerson,createTime,updateTime,editorId,editorName,examinantId,examinantName,examTime,status)
+            values
+            (#{id}, #{no}, #{parentId}, #{foreignSource},#{foreignId},#{name},#{description},#{categoryId},#{categoryName},#{provinceId},#{provinceName},#{cityId},#{cityName},#{countryId},#{countryName},#{districtId},#{districtName},#{lng},#{lat},#{coverPicPath},#{metroLines},#{districtId},#{districtName},#{lng},#{lat},#{coverPicPath},#{metroLines},#{metroStations},#{metroInfo},#{address}, #{completionDate},#{floorHeight},#{floorHeightInfo},#{groundFloors},#{undergroundFloors},#{otherFloorsInfo},#{propertyManagementCompany},#{propertyFee},#{propertyFeeInfo},#{parkingSpace},#{parkingFee},#{airConditioner},#{airConditioningCost},#{airConditionedTime},#{elevator},#{networks},#{settledOrganization},#{style},#{frontDesk},#{meetingRoom},#{basicService},#{featureService},#{businessService},#{isHot},#{isNew},#{isAuto},#{rank},#{counselorId},#{counselorName},#{counselorScore},#{counselorScorePerson},#{createTime},#{updateTime},#{editorId},#{editorName},#{examinantId},#{examinantName},#{examTime},#{status})
+            </insert>
+
+    <update id="deleteTVenue" parameterType="int">
+                update t_venue set status = 0 where id = #{id}
+            </update>
+
+    <update id="updateTVenue" parameterType="com.vpn.website.client.model.TVenue">
+            update t_venue set id=#{id}, no=#{no}, parentId=#{parentId}, foreignSource=#{foreignSource},foreignId=#{foreignId},name=#{name},description=#{description},categoryId=#{categoryId},categoryName=#{categoryName},
+            provinceId=#{provinceId},provinceName=#{provinceName},cityId=#{cityId},cityName=#{cityName},countryId=#{countryId},countryName=#{countryName},districtId=#{districtId},districtName=#{districtName},lng=#{lng},lat=#{lat},
+            coverPicPath=#{coverPicPath},metroLines=#{metroLines},districtId=#{districtId},
+            districtName=#{districtName},lng=#{lng},lat=#{lat},coverPicPath=#{coverPicPath},metroLines=#{metroLines},metroStations=#{metroStations},metroInfo=#{metroInfo},address=#{address},
+            completionDate=#{completionDate},floorHeight=#{floorHeight},floorHeightInfo=#{floorHeightInfo},groundFloors=#{groundFloors},undergroundFloors=#{undergroundFloors},otherFloorsInfo=#{otherFloorsInfo},
+            propertyManagementCompany=#{propertyManagementCompany},propertyFee=#{propertyFee},propertyFeeInfo=#{propertyFeeInfo},parkingSpace=#{parkingSpace},parkingFee=#{parkingFee},airConditioner=#{airConditioner},
+            airConditioningCost=#{airConditioningCost},airConditionedTime=#{airConditionedTime},elevator=#{elevator},networks=#{networks},settledOrganization=#{settledOrganization},style=#{style},frontDesk=#{frontDesk},
+            meetingRoom=#{meetingRoom},basicService=#{basicService},featureService=#{featureService},businessService=#{businessService},isHot=#{isHot},isNew=#{isNew},isAuto=#{isAuto},rank=#{rank},counselorId=#{counselorId},
+            counselorName=#{counselorName},counselorScore=#{counselorScore},counselorScorePerson=#{counselorScorePerson},createTime=#{createTime},updateTime=#{updateTime},editorId=#{editorId},editorName=#{editorName},
+            examinantId=#{examinantId},examinantName=#{examinantName},examTime=#{examTime},status=#{status} where id = #{id}
+            </update>
+
+    <select id="findById" resultType="com.vpn.website.client.model.TVenue" parameterType="int">
+                select * from t_venue where id = #{id}
+            </select>-->
+</mapper>

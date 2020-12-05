@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.vpn.website.client.mapper.TVenuelogMapper">
+
+  <!-- <resultMap id="BaseResultMap" type="com.vpn.website.client.model.TVenuedetail">
+      &lt;!&ndash;@mbg.generated&ndash;&gt;
+      &lt;!&ndash;@Table t_workdetail&ndash;&gt;
+
+      <id column="id" jdbcType="INTEGER" property="id" />
+      <result column="no" jdbcType="VARCHAR" property="no" />
+      <result column="venue" jdbcType="INTEGER" property="venue" />
+      <result column="name" jdbcType="VARCHAR" property="name" />
+      <result column="description" jdbcType="VARCHAR" property="description" />
+      <result column="coverPicPath" jdbcType="VARCHAR" property="coverPicPath" />
+      <result column="category" jdbcType="VARCHAR" property="category" />
+      <result column="price" jdbcType="DECIMAL" property="price" />
+      <result column="priceUnit" jdbcType="VARCHAR" property="priceUnit" />
+      <result column="buildingArea" jdbcType="INTEGER" property="buildingArea" />
+      <result column="buildingAreaUnit" jdbcType="VARCHAR" property="buildingAreaUnit" />
+      <result column="usageRate" jdbcType="DECIMAL" property="usageRate" />
+      <result column="structure" jdbcType="VARCHAR" property="structure" />
+      <result column="monthRent" jdbcType="INTEGER" property="monthRent" />
+      <result column="workingPositionLow" jdbcType="INTEGER" property="workingPositionLow" />
+      <result column="workingPositionHigh" jdbcType="INTEGER" property="workingPositionHigh" />
+      <result column="oriention" jdbcType="VARCHAR" property="oriention" />
+      <result column="freeDays" jdbcType="VARCHAR" property="freeDays" />
+      <result column="shortestLease" jdbcType="VARCHAR" property="shortestLease" />
+      <result column="fitments" jdbcType="VARCHAR" property="fitments" />
+      <result column="propertyFee" jdbcType="VARCHAR" property="propertyFee" />
+      <result column="airConditioningCost" jdbcType="VARCHAR" property="airConditioningCost" />
+      <result column="parkingFee" jdbcType="VARCHAR" property="parkingFee" />
+      <result column="floorInfo" jdbcType="VARCHAR" property="floorInfo" />
+      <result column="position" jdbcType="VARCHAR" property="position" />
+      <result column="landUsage" jdbcType="VARCHAR" property="landUsage" />
+      <result column="floorArea" jdbcType="DECIMAL" property="floorArea" />
+      <result column="floorAreaUnit" jdbcType="VARCHAR" property="floorAreaUnit" />
+      <result column="plotRatio" jdbcType="DECIMAL" property="plotRatio" />
+      <result column="bulidingNo" jdbcType="VARCHAR" property="bulidingNo" />
+      <result column="totalFloor" jdbcType="INTEGER" property="totalFloor" />
+      <result column="floorHeight" jdbcType="DECIMAL" property="floorHeight" />
+      <result column="loadBearing" jdbcType="DECIMAL" property="loadBearing" />
+      <result column="loadBearingUnit" jdbcType="VARCHAR" property="loadBearingUnit" />
+      <result column="millConstruction" jdbcType="VARCHAR" property="millConstruction" />
+      <result column="bulidingUsage" jdbcType="VARCHAR" property="bulidingUsage" />
+      <result column="isStandard" jdbcType="TINYINT" property="isStandard" />
+      <result column="existElevator" jdbcType="TINYINT" property="existElevator" />
+      <result column="electricity" jdbcType="VARCHAR" property="electricity" />
+      <result column="spareArea" jdbcType="INTEGER" property="spareArea" />
+      <result column="bridgeCrane" jdbcType="TINYINT" property="bridgeCrane" />
+      <result column="bridgeCraneTon" jdbcType="DECIMAL" property="bridgeCraneTon" />
+      <result column="isAuto" jdbcType="TINYINT" property="isAuto" />
+      <result column="displayNo" jdbcType="INTEGER" property="displayNo" />
+      <result column="createTime" jdbcType="TIMESTAMP" property="createTime" />
+      <result column="updateTime" jdbcType="TIMESTAMP" property="updateTime" />
+      <result column="editorId" jdbcType="INTEGER" property="editorId" />
+      <result column="editorName" jdbcType="VARCHAR" property="editorName" />
+      <result column="examinantId" jdbcType="INTEGER" property="examinantId" />
+      <result column="examinantName" jdbcType="VARCHAR" property="examinantName" />
+      <result column="examTime" jdbcType="TIMESTAMP" property="examTime" />
+      <result column="status" jdbcType="VARCHAR" property="status" />
+   </resultMap>
+
+   <sql id="Base_Column_List">
+      &lt;!&ndash;@mbg.generated&ndash;&gt;
+      id, `no`, venue, `name`, description, coverPicPath, category, price, priceUnit, buildingArea, buildingAreaUnit, usageRate, structure, monthRent,
+      workingPositionLow, workingPositionHigh, oriention, freeDays, shortestLease, fitments, propertyFee, airConditioningCost, parkingFee, floorInfo,
+      `position`, landUsage, floorArea, floorAreaUnit, plotRatio, bulidingNo, totalFloor, floorHeight, loadBearing, loadBearingUnit, millConstruction,
+      bulidingUsage, isStandard, existElevator, electricity, spareArea, bridgeCrane, bridgeCraneTon, isAuto, displayNo, createTime, updateTime, editorId,
+      editorName, examinantId, examinantName, examTime, `status`
+   </sql>-->
+   <!-- <select id="selectAllTVenue">
+                select * from t_venue
+           </select>
+
+    <insert id="addTVenue" parameterType="com.vpn.website.client.model.TVenue">
+            insert into t_venue (id, no, parentId, foreignSource, foreignId, name,description,categoryId,categoryName,provinceId,provinceName,cityId,cityName,countryId,countryName,districtId,districtName,lng,lat,coverPicPath,metroLines,metroStations,metroInfo,address,completionDate,floorHeight,floorHeightInfo,groundFloors,undergroundFloors,otherFloorsInfo,propertyManagementCompany,propertyFee,propertyFeeInfo,parkingSpace,parkingFee,airConditioner,airConditioningCost,airConditionedTime,elevator,networks,settledOrganization,style,frontDesk,meetingRoom,basicService,featureService,businessService,isHot,isNew,isAuto,rank,counselorId,counselorName,counselorScore,
+            counselorScorePerson,createTime,updateTime,editorId,editorName,examinantId,examinantName,examTime,status)
+            values
+            (#{id}, #{no}, #{parentId}, #{foreignSource},#{foreignId},#{name},#{description},#{categoryId},#{categoryName},#{provinceId},#{provinceName},#{cityId},#{cityName},#{countryId},#{countryName},#{districtId},#{districtName},#{lng},#{lat},#{coverPicPath},#{metroLines},#{districtId},#{districtName},#{lng},#{lat},#{coverPicPath},#{metroLines},#{metroStations},#{metroInfo},#{address}, #{completionDate},#{floorHeight},#{floorHeightInfo},#{groundFloors},#{undergroundFloors},#{otherFloorsInfo},#{propertyManagementCompany},#{propertyFee},#{propertyFeeInfo},#{parkingSpace},#{parkingFee},#{airConditioner},#{airConditioningCost},#{airConditionedTime},#{elevator},#{networks},#{settledOrganization},#{style},#{frontDesk},#{meetingRoom},#{basicService},#{featureService},#{businessService},#{isHot},#{isNew},#{isAuto},#{rank},#{counselorId},#{counselorName},#{counselorScore},#{counselorScorePerson},#{createTime},#{updateTime},#{editorId},#{editorName},#{examinantId},#{examinantName},#{examTime},#{status})
+            </insert>
+
+    <update id="deleteTVenue" parameterType="int">
+                update t_venue set status = 0 where id = #{id}
+            </update>
+
+    <update id="updateTVenue" parameterType="com.vpn.website.client.model.TVenue">
+            update t_venue set id=#{id}, no=#{no}, parentId=#{parentId}, foreignSource=#{foreignSource},foreignId=#{foreignId},name=#{name},description=#{description},categoryId=#{categoryId},categoryName=#{categoryName},
+            provinceId=#{provinceId},provinceName=#{provinceName},cityId=#{cityId},cityName=#{cityName},countryId=#{countryId},countryName=#{countryName},districtId=#{districtId},districtName=#{districtName},lng=#{lng},lat=#{lat},
+            coverPicPath=#{coverPicPath},metroLines=#{metroLines},districtId=#{districtId},
+            districtName=#{districtName},lng=#{lng},lat=#{lat},coverPicPath=#{coverPicPath},metroLines=#{metroLines},metroStations=#{metroStations},metroInfo=#{metroInfo},address=#{address},
+            completionDate=#{completionDate},floorHeight=#{floorHeight},floorHeightInfo=#{floorHeightInfo},groundFloors=#{groundFloors},undergroundFloors=#{undergroundFloors},otherFloorsInfo=#{otherFloorsInfo},
+            propertyManagementCompany=#{propertyManagementCompany},propertyFee=#{propertyFee},propertyFeeInfo=#{propertyFeeInfo},parkingSpace=#{parkingSpace},parkingFee=#{parkingFee},airConditioner=#{airConditioner},
+            airConditioningCost=#{airConditioningCost},airConditionedTime=#{airConditionedTime},elevator=#{elevator},networks=#{networks},settledOrganization=#{settledOrganization},style=#{style},frontDesk=#{frontDesk},
+            meetingRoom=#{meetingRoom},basicService=#{basicService},featureService=#{featureService},businessService=#{businessService},isHot=#{isHot},isNew=#{isNew},isAuto=#{isAuto},rank=#{rank},counselorId=#{counselorId},
+            counselorName=#{counselorName},counselorScore=#{counselorScore},counselorScorePerson=#{counselorScorePerson},createTime=#{createTime},updateTime=#{updateTime},editorId=#{editorId},editorName=#{editorName},
+            examinantId=#{examinantId},examinantName=#{examinantName},examTime=#{examTime},status=#{status} where id = #{id}
+            </update>
+
+    <select id="findById" resultType="com.vpn.website.client.model.TVenue" parameterType="int">
+                select * from t_venue where id = #{id}
+            </select>-->
+</mapper>

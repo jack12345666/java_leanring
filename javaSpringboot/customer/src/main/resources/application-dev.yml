@@ -1,0 +1,27 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /
+
+#表示是否开启Swagger,一般线上环境是关闭的
+spring:
+  swagger2:
+    enabled: true
+
+#mybatis配置
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.wmt.openapi.entity
+  configuration:
+    map-underscore-to-camel-case: true
+
+
+# 日志级别
+#logging:
+#  level:
+#    com.kangaroo.firstspringboot: INFO
+#  file: # 项目的根目录下 output/logs/spring.log 默认的日志名为spring.log
+#    path: E:/output/logs/
+#  pattern:
+#    console: '%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{50} -%msg%n'
+#    file: '%d{yyyy/MM/dd HH:mm:ss} === [%thread] == %-5level == %logger{50} == %msg%n'

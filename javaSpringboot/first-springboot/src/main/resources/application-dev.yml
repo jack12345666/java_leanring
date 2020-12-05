@@ -1,0 +1,35 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /
+
+
+picPath: D:\xxx\yyy\
+
+aliyun:
+  key: 12345678
+  value: 123456
+  name: aliyun
+
+#mybatis配置
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.kangaroo.firstspringboot.entity
+  configuration:
+    map-underscore-to-camel-case: true
+
+
+
+# 连接数据库信息
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql:///air?serverTimezone=UTC
+    username: root
+    password: 123456
+    type: com.alibaba.druid.pool.DruidDataSource
+
+# 查看sql语句
+logging:
+  level:
+    com.kangaroo.firstspringboot.mapper: DEBUG

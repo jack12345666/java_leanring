@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <!--  引入类型的自动注入：spring框架根据某些规则可以给引用类型赋值 -->
+
+
+    <bean id="myStudent" class="org.example.di04.Student" autowire="byName">
+        <property name="name" value="张三"/>
+        <property name="age" value="30"/>
+<!--        <constructor-arg name="" ref="mySchool"/>-->
+    </bean>
+     <!-- 声明School对象 -->
+
+    <bean id="school" class="org.example.di04.School">
+        <property name="name" value="浙江大学" />
+        <property name="address" value="杭州西湖" />
+    </bean>
+
+</beans>

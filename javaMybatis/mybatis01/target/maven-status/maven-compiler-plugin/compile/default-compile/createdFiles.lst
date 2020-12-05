@@ -1,0 +1,4 @@
+com\mybatis\MyApp.class
+com\mybatis\domain\Student.class
+com\mybatis\utils\MyBatisUtils.class
+com\mybatis\dao\StudentDao.class

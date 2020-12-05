@@ -1,0 +1,21 @@
+swagger:
+  enable: true
+
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/zqt?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: root
+    password: 123456
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations: classpath*:com/zqt/website/mapper/xml/*.xml
+  type-aliases-package: com.zqt.website.mapper
+
+app:
+  # 图片等文件放在这个目录下，可以直接访问到，相当于把文件放在webapps下
+  filepath: D:/apps/uploads/partybuilding/
+  fortest: true
